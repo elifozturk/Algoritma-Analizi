@@ -24,3 +24,5 @@ int main(int argc, char *argv[])
   system("PAUSE");	
   return 0;
 }
+  // karmaşıklık 2^adım sayısı olduğu için buradan a=logb olur 
+  // buradan da karmaşıklık O(logN) olur.  
