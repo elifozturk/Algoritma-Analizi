@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int sayac=1;
+long us_alma(int m, int n){
+     if(n==0) return 1;
+     if(n==1) return m;
+     if(n%2==0){
+           sayac++;
+           return us_alma(m*m, n/2);         
+     }else{
+           sayac++;
+           return us_alma(m*m, n/2)*m;
+     }
+}
+
+int main(int argc, char *argv[])
+{
+    int a, b,c;
+     printf("ilk sayiyi gir:");
+     scanf("%d",&a);
+     printf("kuvveti gir:");
+     scanf("%d",&b);
+     c=us_alma(a,b);
+     printf("\nsonuc= %d\n",c);
+     printf("\nadım sayısı= %d\n",sayac);
+  
+  // karmaşıklık 2^adım sayısı olduğu için buradan a=logb olur 
+  // buradan da karmaşıklık O(logN) olur.  
+  
+  system("PAUSE");	
+  return 0;
+}
