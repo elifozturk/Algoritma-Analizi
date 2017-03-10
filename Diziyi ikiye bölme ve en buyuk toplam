@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+    int A[]={-2,4,-3,2,1,6,-1,-2,4,2};
+    int boyut=10;
+    int toplam1=0;
+    int toplam2=0;
+    int yeni1=0;
+    int yeni2=0;
+    int k,l;
+    for(k=0;k<(boyut/2);k++){
+     printf("%d  ",A[k]);
+     toplam1=toplam1+A[k];
+     if(yeni1>toplam1) toplam1=yeni1;
+    }
+    printf("\nEn buyuk toplam1=%d  ",toplam1);
+    printf("\n");
+    for(l=4;l<boyut;l++){
+     printf("%d  ",A[l]);
+     toplam2=toplam2+A[l];
+     if(yeni2>toplam2) toplam2=yeni2;
+    }
+    printf("\nEn buyuk toplam2=%d  ",toplam2);
+
+  system("PAUSE");	
+  return 0;
+}
