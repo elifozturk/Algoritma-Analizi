@@ -48,9 +48,10 @@ def max_sub_sum_array(array):
         sum_middle=find_middle(array)
     return find_max_triple(sum_left,sum_right,sum_middle)
 
- 
+starttime = time.time()
 
-myList= [4, -3, 5, -2, -1, 2, 6, -2 ]
-result=max_sub_sum_array(myList)
+myarray = np.arange(100)
+result=max_sub_sum_array(myarray)
 print(result)
-
+endtime = time.time() 
+print "This took %.5f seconds" % (endtime-starttime)
